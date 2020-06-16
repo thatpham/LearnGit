@@ -8,3 +8,14 @@ public static void Main()
         Console.WriteLine("Shift JIS: " + System.Text.Encoding.GetEncoding(932).GetString(recovered1)); //Shift JIS
 
 	}
+	
+	
+	Imports System
+				
+Public Module Module1
+	Public Sub Main()
+		Dim badstringFromDatabase as String = "使"
+		Dim value as Byte() = System.Text.Encoding.GetEncoding(932).GetBytes(badstringFromDatabase)
+		Console.WriteLine(value.Length)
+	End Sub
+End Module
